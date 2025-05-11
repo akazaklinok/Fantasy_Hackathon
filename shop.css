@@ -1,0 +1,365 @@
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #5e2ca5, #b084cc);
+  border: 2px solid #ffeaa7;
+  color: #ffeaa7;
+  font-size: 18px;
+  font-family: "Playfair Display SC", serif;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #b084cc, 0 0 20px #5e2ca5;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.music-btn:hover {
+  box-shadow: 0 0 25px #ffffff, 0 0 40px #7e8339;
+  transform: scale(1.1);
+}
+
+
+
+
+
+body {
+  margin: 0;
+  font-family: 'Marmelad', serif;
+  background: url("./images/wood.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  font-size: 68px;
+  font-weight: bold;
+  color: #dec37a;
+  text-align: center;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: url("./images/for_shop.jpg") no-repeat center center/cover;
+  position: relative;
+}
+.hero-text {
+  max-width: 50%;
+  color: rgb(255, 255, 255);
+  max-width: 90%;
+  justify-content: center; /* центрує по горизонталі */
+  align-items: center;     /* центрує по вертикалі */
+  text-align: center;      /* вирівнює текст в елементах */
+  gap: 400px; /* відстань між елементами */
+  }
+  
+
+
+.hero-text h1 {
+  font-size: 48px;
+  margin: 60px 0;
+}
+
+.hero-text p {
+  font-size: px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  background: #040f16;
+  color: #ffffff;
+}
+
+.btn:hover {
+  box-shadow: 0 0 2px 2px #0000003a;
+}
+
+.btn .icon {
+  position: absolute;
+  height: 40px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.btn .text {
+  transform: translateX(55px);
+}
+
+.btn:hover .icon {
+  width: 175px;
+}
+
+.btn:hover .text {
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active .icon {
+  transform: scale(0.85);
+}
+
+/* Розділ "Featured Products" */
+/* Серце*/
+.heart-container {
+  --heart-color: rgb(133, 10, 10);
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: 10px;
+  transition: 0.3s;
+}
+
+.heart-container .checkbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.heart-container .svg-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart-container .svg-outline,
+.heart-container .svg-filled {
+  fill: var(--heart-color);
+  position: absolute;
+}
+
+.heart-container .svg-filled {
+  animation: keyframes-svg-filled 1s;
+  display: none;
+}
+
+.heart-container .svg-celebrate {
+  position: absolute;
+  animation: keyframes-svg-celebrate 0.5s;
+  animation-fill-mode: forwards;
+  display: none;
+  stroke: var(--heart-color);
+  fill: var(--heart-color);
+  stroke-width: 2px;
+}
+
+.heart-container .checkbox:checked ~ .svg-container .svg-filled {
+  display: block;
+}
+
+.heart-container .checkbox:checked ~ .svg-container .svg-celebrate {
+  display: block;
+}
+
+@keyframes keyframes-svg-filled {
+  0% {
+    transform: scale(0);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes keyframes-svg-celebrate {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+    display: none;
+  }
+}
+
+
+.featured-products h2 {
+  font-size: 90px;
+  margin-bottom: 60px;
+  color: #ffffff;
+  transform: translateY(-200px);
+
+}
+/* Контейнер для товарів */
+.products-wrapper {
+  display: grid; /* Використовуємо CSS Grid */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Автоматично розміщує товари в колонки */
+  gap: 20px; /* Відстань між товарами */
+  padding: 0 20px; /* Додамо трохи відступів з боків */
+  max-width: 1000px; /* Обмежуємо максимальну ширину контейнера */
+  margin: 0 auto; /* Центруємо контейнер на сторінці */
+}
+
+/* Картка товара */
+
+.add-to-cart-btn {
+  background: linear-gradient(145deg, #5e2ca5, #b084cc);
+  color: #ffeaa7;
+  border: 2px solid #dec37a;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-family: 'Marmelad', serif;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #b084cc, 0 0 20px #5e2ca5;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.add-to-cart-btn:hover {
+  background: linear-gradient(145deg, #b084cc, #5e2ca5);
+  box-shadow: 0 0 15px #ffeaa7, 0 0 30px #b084cc;
+  transform: scale(1.05);
+}
+
+
+.product-card {
+  background: #f9f9f9;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+/* фото товара */
+.product-card img {
+  width: 200px;
+  margin-bottom: 5px; /* Додаємо трохи відступу між зображенням та текстом */
+  border-radius: 10px;
+}
+
+.product-card p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #000000;
+}
+
+.product-card p:last-child {
+  font-weight: bold;
+  color: #000000;
+}
+
+
+/* Ховаємо кнопки навігації, оскільки Grid сам по собі добре вирівнює елементи */
+.prev-btn,
+.next-btn {
+  display: none;
+}
+
+/* фон */
+.background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+.dialogue-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  
+}
+
+.dialogue-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.dialogue-card {
+  background: linear-gradient(145deg, #2e1a47, #3c265b);
+  border: 3px solid #d6b365;
+  border-radius: 18px;
+  padding: 10px 140px;
+  box-shadow: 0 0 20px rgba(214, 179, 101, 0.6);
+  font-size: 40px; /* Тоже уменьшаем текст */
+}
+
+
+
+.left-dragon {
+  order: -10;
+  margin-right: 250px;     /* сдвигает вліво */
+  transform: translateX(-100px);
+}
+
+.right-dragon {
+  width: 600px;
+  height: 700px;
+  margin-top: -60px;     /* поднимает вверх */
+  margin-left: 100px;     /* сдвигает вправо */
+}
+
+
+
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url("./images/for_shop.jpg") no-repeat center center/cover;
+}

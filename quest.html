@@ -1,0 +1,1114 @@
+<!DOCTYPE html><html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Печать П'яти Королівств</title>
+  <link rel="stylesheet" href="quest.css">
+</head>
+  <audio id="bgMusic" autoplay loop>
+    <source src="./music/start_song.mp3" type="audio/mpeg">
+  </audio>
+  <button id="musicToggle" class="music-btn">🔊Підключити</button>
+  </audio>
+  <script>
+    function saveScene(id) {
+      let history = JSON.parse(localStorage.getItem("sceneHistory") || "[]");
+      if (!history.includes(id)) {
+        history.push(id);
+        localStorage.setItem("sceneHistory", JSON.stringify(history));
+      }
+    }
+    </script>
+<body onclick="skipDialogue()">
+  <div id="content">
+    <section id="intro" class="scene active">
+      <br><br>
+      <h1><b>Привіт, мандрівнику!<br> Готовий до пригод?</b></h1>
+      <button id="startBtn" onclick="showScene('scene1')">Почати квест</button>
+    </section>
+    
+
+    <section id="scene1" class="scene" onclick="showScene('scenea')">
+      <div class="character1">
+        <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+        <div class="dialogue">
+          <p>Роа: Сьогодні чудова погода, правда?</p>
+        </div>
+      </div>
+    </section>
+
+     <section id="scenea" class="scene"  onclick="showScene('scene1b')">
+      <div class="character2">
+        <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+        <div class="dialogue">
+          <p>Іріс: Так, але для чого нас викликав сам король... Ти точно нічого не накоїв?</p>
+        </div>
+      </div>
+    </section>
+
+    
+  
+      <section id="scene1b" class="scene">
+        <div class="character2">
+          <img src="./images/guard.png" alt="Сторож" class="dragon-img">
+          <div class="dialogue">
+            <p>Сторож: Як вас звати?</p>
+          </div>
+        </div>
+        <input type="text" id="nameInput" placeholder="Введи своє ім’я">
+        <button onclick="submitIntro('scene1c')">Підтвердити</button>
+      </section>
+  
+      <section id="scene1c" class="scene" onclick="showScene('scene1d')">
+        <div class="character3">
+          <img src="./images/guard.png" alt="Сторож">
+          <div class="dialogue" onclick="showScene('scene1d')">
+            <p id="guardReply"> Добре, вас вже чекають. Йдіть до зали.</p>
+          </div>
+        </div>
+      </section>
+  
+  
+<section id="scene1d" class="scene">
+  <p id="character1 floating">Роа: Ой, а куди тепер?</p>
+  <button onclick="showScene('scene1e')">Наліво</button>
+  <button onclick="showScene('scene1f')">Прямо</button>
+  <button onclick="showScene('scene1g')">Направо</button>
+</section>
+
+<section id="scene1e" class="scene">
+  <div class="dialogue">
+  <p>Іріс: Взагалі-то нам треба прямо, сторож же сказав, ти чим слухаєш! Що б ви без мене робили?</p>
+</div>
+  <button onclick="showScene('scene1f')">Прямо</button>
+</section>
+
+<section id="scene1g" class="scene">
+  <div class="dialogue">
+  <p>Іріс: Взагалі-то нам треба прямо, сторож же сказав, ти чим слухаєш! Що б ви без мене робили?</p>
+  </div>
+  <button onclick="showScene('scene1f')">Прямо</button>
+</section>
+
+<section id="scene1f" class="scene">
+  <div class="dialogue">
+  <p>Дракарис: Радий вас бачити. Перед вами важлива місія. Світ у небезпеці і лише ключі можуть відновити печать...</p>
+  </div>
+  <button onclick="showScene('scene1h')">Ознайомитись</button>
+</section>
+
+<section id="scene1h" class="scene">
+  <p>
+    1. Астралія — печера на горі Тал'Ран...<br>
+    2. Елісерія — королівство вовкулак...<br>
+    3. Веларія — королівство ельфів...<br>
+    4. Люмелія — королівство фей...<br>
+    5. Ерестор — королівство дворфів...
+  </p>
+  <button onclick="showScene('scene1i')">Закрити</button>
+</section>
+
+  <section id="scene1i" class="scene">
+  <div class="dialogue">
+  <p>Чи згодні ви допомогти?</p>
+  </div>
+  <button onclick="showScene('scene1j')">Так,я допоможу вам</button>
+  <button onclick="showScene('scene1m')">Ні, я не готовий</button>
+</section>
+
+<section id="scene1m" class="scene">
+  <div class="dialogue" onclick="showScene('intro')">
+  <p>Король: Я розумію ваш вибір, на все добре</p>
+  </div>
+</section>
+
+<section id="scene1j" class="scene">
+  <div class="dialogue">
+  <p>Король: Чудово,ви купляли речі в магазині?</p>
+  </div>
+  <button onclick="showScene('scene1k')">Так</button>
+  <button onclick="showScene('scene1l')">Ні</button>
+</section>
+
+<section id="scene1k" class="scene"  onclick="showScene('scene2')">
+  <div class="dialogue">
+  <p>Король:Це допоможе вам у проходженні квесту.Гарної дороги</p>
+  </div>
+</section>
+
+<section id="scene1l" class="scene"  onclick="showScene('scene2')">
+  <div class="dialogue">
+  <p>Король:Ви можете розраховувати тільки на свої сили</p>
+  </div>
+</section>
+
+
+
+  <section id="scene2" class="scene">
+    <div class="character1" onclick="showScene('scene2a')">
+      <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+      <div class="dialogue">
+        <p>Роа:Фуф, я так переживав.. І кіди тепер?</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scene2a" class="scene"  onclick="showScene('scene2b')">
+    <div class="character2">
+      <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+      <div class="dialogue">
+        <p>Іріс:Хмм, тут написано.. Ось! Печера на горі Тал'Ран,там живе дуже старий дракон</p>
+      </div>
+    </div>
+  </section>
+  <section id="scene2b" class="scene"  onclick="showScene('scene2c')">
+    <div class="character2">
+      <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+      <div class="dialogue">
+        <p>Іріс:І..він любить колекціонувати дорогоцінності. Скоріш за все перший ключ - ключ Волі також у нього</p>
+      </div>
+    </div>
+  </section>
+  <section id="scene2c" class="scene" onclick="showScene('scene2d')">
+    <div class="character1">
+      <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+      <div class="dialogue">
+        <p>Роа:Вперед!На пошуки пригод!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scene2d" class="scene" onclick="showScene('scene2e')">
+    <div class="character1">
+      <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+      <div class="dialogue">
+        <p>Роа:Я вже бачу гори, значить там знаходиться печера?</p>
+      </div>
+    </div>
+  </section>
+  <section id="scene2e" class="scene"  onclick="showScene('scene2f')">
+    <div class="character2">
+      <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+      <div class="dialogue">
+        <p>Іріс:Який ти в нас розумний. Так, скоро ми побачимо печеру</p>
+      </div>
+    </div>
+  </section>
+  <section id="scene2f" class="scene" onclick="showScene('scene2g')">
+    <div class="character1">
+      <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+      <div class="dialogue">
+        <p>Роа:Вона..Величезна!</p>
+      </div>
+    </div>
+  </section>
+  <section id="scene2g" class="scene"  onclick="showScene('scene2h')">
+    <div class="character2">
+      <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+      <div class="dialogue">
+        <p>Іріс:Навіть занадто велика, чому ми її ніколи не бачили? </p>
+      </div>
+    </div>
+  </section>
+  <section id="scene2h" class="scene"  onclick="showScene('scene2i')">
+    <div class="character2">
+      <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+      <div class="dialogue">
+        <p>Іріс:Але не будем витрачати час, ходімо </p>
+      </div>
+    </div>
+  </section>
+  <section id="scene2i" class="scene" onclick="showScene('scene2j')">
+    <div class="character1">
+      <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+      <div class="dialogue">
+        <p>Роа:Почекай! А подарунок?</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scene2j" class="scene">
+        <p id ="character2 floating">Іріс:Як я могла забути.. Давайте подивимось що у нас є з собою </p>
+        <button onclick="showScene('scene2k')">Ізумруд</button>
+        <button onclick="showScene('scene2k')">Золото</button>
+        <button onclick="showScene('scene2k')">Зілля</button>
+  </section>
+  <section id="scene2k" class="scene" onclick="showScene('scene2l')">
+    <div class="character1">
+      <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+      <div class="dialogue">
+        <p>Роа:Чудовий вибір, тепер ми можемо йти</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section id="scene2l" class="scene"  onclick="showScene('scene2m')">
+    <div class="dialogue">
+    <p>Дракарис:Я нікого не чекав.. Невже вечеря сама прйшла?</p>
+    </div>
+  </section>
+  <section id="scene2m" class="scene"  onclick="showScene('scene2n')">
+    <div class="dialogue">
+    <p>Дракарис:Що вам потрібно?Чи ви по..кхм</p>
+    </div>
+  </section>
+
+  <section id="scene2n" class="scene">
+    <div class="dialogue">
+    <p>І ви заберете його просто так? Дайте мені щось натомість</p>
+    </div>
+    <button onclick="showScene('scene2o')">Віддати</button>
+    <button onclick="saveScene('scene2p'); showScene('scene2p')">Залишити собі</button>
+  </section>
+  
+  <section id="scene2p" class="scene" onclick="showScene('scene101')">
+    <div class="dialogue" >
+    <p>Дракарис:Тоді ви нічого не отримаєте. Йдіть звідси, а інакше..</p>
+    </div>
+  </section>
+  
+  <section id="scene2o" class="scene" onclick="showScene('scene2q')">
+    <div class="dialogue">
+    <p>Дракарис:Мені подобається, ключ ваш. А тепер йдіть поки не передумав</p>
+    </div>
+  </section>
+  
+  <section id="scene2q" class="scene"  onclick="showScene('scene2r')">
+    <div class="character2">
+      <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+      <div class="dialogue">
+        <p>Іріс:Дякую, ми вже йдемо</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="scene2r" class="scene" onclick="showScene('scene2s')">
+    <div class="character1">
+      <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+      <div class="dialogue">
+        <p>Роа:Куди далі?</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scene2s" class="scene" onclick="showScene('scene2t')">
+    <div class="character2">
+      <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+      <div class="dialogue">
+        <p>Іріс:В Елісерію, за місячним ключем</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scene2t" class="scene" onclick="showScene('scene3')">
+    <div class="character1">
+      <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+      <div class="dialogue">
+        <p>Роа:Фууу, ну чому саме туди..</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="scene3" class="scene"  onclick="showScene('scene3a')">
+    <div class="character2">
+      <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+      <div class="dialogue">
+        <p>Іріс:Будьмо обережні. Тут не завжди раді гостям.</p>
+      </div>
+    </div>
+  </section>
+  <section id="scene3a" class="scene" onclick="showScene('scene3b')">
+    <div class="character1">
+      <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+      <div class="dialogue">
+        <p>Роа:Ці ліси виглядають похмуро. Сподіваюся, ми не зустрінемо нічого небезпечного.</p>
+      </div>
+    </div>
+  </section>
+  <section id="scene3b" class="scene">
+    <div class="dialogue">
+    <p>Гоблін-лідер: Зупиніться! Це наша територія. Платіть мито або готуйтеся до бою!</p>
+    </div>
+    <button onclick="showScene('scene3c')">Заплатити</button>
+    <button onclick="showScene('scene3d')">Тікати</button>
+    <button onclick="showScene('scene3e')">Битися</button>
+  </section>
+  <section id="scene3c" class="scene" onclick="showScene('scene3f')">
+    <div class="dialogue">
+    <p>Гоблін-лідер: Правильно, знайте своє місце.Тепер ви можете йти</p>
+  </section>
+  <section id="scene3d" class="scene" onclick="showScene('scene3g')">
+    <div class="dialogue">
+    <p>Гоблін-лідер: Стояти! Швидко за ними</p>
+  </section>
+  <section id="scene3e" class="scene" onclick="showScene('scene3g')">
+    <div class="dialogue">
+    <p>Гоблін-лідер: Діставайте палиці, зараз ми їх..</p>
+  </section>
+
+
+  <section id="scene3f" class="scene" onclick="showScene('scene3h')">
+    <div class="character1">
+      <img src="./images/Roa_sad.png" alt="Роа" class="character1">
+      <div class="dialogue">
+        <p>Роа:В нас більше нічого немає..Ми приречені</p>
+      </div>
+    </div>
+  </section>
+  <section id="scene3h" class="scene" onclick="showScene('scene3i')">
+    <div class="character2">
+      <img src="./images/Iris_sad.png" alt="Роа" class="character2">
+      <div class="dialogue">
+        <p>Іріс:Головне всі цілі, треба йти далі</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="scene3g" class="scene" onclick="showScene('scene3j')">
+    <div class="character1">
+      <img src="./images/serious_iris.png" alt="Іріс" class="character2">
+      <div class="dialogue">
+        <p>Іріс:Тікайте, я їх затримаю!</p>
+      </div>
+    </div>
+  </section>
+  <section id="scene3j" class="scene" onclick="showScene('scene3k')">
+    <div class="character1">
+      <img src="./images/Roa_sad.png" alt="Роа" class="character1">
+      <div class="dialogue">
+        <p>Роа:Але сестра..</p>
+      </div>
+    </div>
+  </section>
+  <section id="scene3k" class="scene" onclick="showScene('scene3l')">
+    <div class="character2">
+      <img src="./images/serious_iris.png" alt="Іріс" class="character2">
+      <div class="dialogue">
+        <p>Іріс:Швидко!</p>
+      </div>
+    </div>
+  </section>
+  <section id="scene3l" class="scene" onclick="showScene('scene3m')">
+    <div class="character1">
+      <img src="./images/Roa_sad.png" alt="Роа" class="character1">
+      <div class="dialogue">
+        <p>Роа:Іріс, як вона там..Чому я нічим не допоміг</p>
+      </div>
+    </div>
+  </section>
+  <section id="scene3m" class="scene" onclick="showScene('scene3n')">
+    <div class="character2">
+      <img src="./images/happy_Iris.png" alt="Іріс" class="character2">
+      <div class="dialogue">
+        <p>Іріс:Я так рада, що ви цілі. Тепер ми в безпеці</p>
+      </div>
+    </div>
+  </section>
+  <section id="scene3n" class="scene" onclick="showScene('scene3o')">
+    <div class="character1">
+      <img src="./images/Roa_sad.png" alt="Роа" class="character1">
+      <div class="dialogue">
+        <p>Роа:Сестра, ти..<p>
+      </div>
+    </div>
+  </section>
+  <section id="scene3o" class="scene" onclick="showScene('scene3i')">
+    <div class="character2">
+      <img src="./images/slay_iris.png" alt="Іріс" class="character2">
+      <div class="dialogue">
+        <p>Іріс:Я обіцяла допомогти, а тепер ходімо</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="scene3i" class="scene" onclick="showScene('scene3p')">
+    <div class="NPSRnight">
+    <img src="./images/NPS_Knight.png" alt="Лицар" class="NPSRnight">
+    <div class="dialogue">
+    <p>Лицар: Добрий день, навіщо вам в Елісерію?</p>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section id="scene3p" class="scene">
+  <div class="dialogue">
+  <p>Лицар: Але відповідайте чесно</p>
+  </div>
+    <button onclick="showScene('scene3q')">Ми подорожуємо</button>
+    <button onclick="showScene('scene3q')">Ми в гості</button>
+    <button onclick="showScene('scene3q')">Ми авантюристи</button>
+</section>
+
+  <section id="scene3q" class="scene" onclick="showScene('scene3r')">
+    <div class="NPSRnight">
+      <img src="./images/NPS_Knight.png" alt="Лицар" class="NPSRnight">
+      <div class="dialogue">
+        <p> Лицар: Гарної дороги</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scene3r" class="scene"  onclick="showScene('scene3s')">
+    <div class="character2">
+      <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+      <div class="dialogue">
+        <p>Іріс:Тепер у нас є дозвіл лицаря, так що потрапити до замку не проблема</p>
+      </div>
+    </div>
+  </section>
+  <section id="scene3s" class="scene" onclick="showScene('scene3t')">
+    <div class="character1">
+      <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+      <div class="dialogue">
+        <p>Роа:Хоч десь нам пощастило</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="scene3t" class="scene" onclick="showScene('scene3u')">
+    <div class="character1">
+      <img src="./images/stress_Roa.png" alt="Роа" class="character1">
+      <div class="dialogue">
+        <p>Роа:Тут так темно, і нікого немає</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scene3u" class="scene"  onclick="showScene('scene3v')">
+    <div class="character2">
+      <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+      <div class="dialogue">
+        <p>Іріс:Давайте розділимося</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scene3v" class="scene" onclick="showScene('scene3w')">
+    <div class="character1">
+      <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+      <div class="dialogue">
+        <p>Роа:Але тут так темно, а я за тебе переживаю.Може краще всі разом?</p>
+      </div>
+    </div>
+  </section>
+  <section id="scene3w" class="scene"  onclick="showScene('scene3x')">
+    <div class="character2">
+      <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+      <div class="dialogue">
+        <p>Іріс:Тільки не кажи, що боїшся. Йди давай</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scene3x" class="scene" onclick="showScene('scene3y')">
+    <div class="character1">
+      <div class="dialogue">
+        <p>Роа:Ммм..напевно я щось знайшов</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scene3y" class="scene"  onclick="showScene('scene3z')">
+    <div class="character2">
+      <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+      <div class="dialogue">
+        <p>Іріс:Ти такий молодець! Це дійсно воно</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scene3z" class="scene"  onclick="showScene('scene31')">
+    <div class="character2">
+      <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+      <div class="dialogue">
+        <p>Іріс:І це той самий схований ключ? Неочікувано, думала буде складніше</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scene31" class="scene"  onclick="showScene('scene32')">
+    <div class="character2">
+      <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+      <div class="dialogue">
+        <p>Іріс:Лишилось ще три королівства</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scene32" class="scene" onclick="showScene('scene33')">
+    <div class="character1">
+      <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+      <div class="dialogue">
+        <p>Роа:А яке далі?</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scene33" class="scene"  onclick="showScene('scene4')">
+    <div class="character2">
+      <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+      <div class="dialogue">
+        <p>Іріс:Веларія - королівство ельфів</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="scene4" class="scene" onclick="showScene('scene4a')">
+    <div class="character1">
+      <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+      <div class="dialogue">
+        <p>Роа:А в них тут приємна атмосфера</p>
+      </div>
+    </div>
+  </section>
+  <section id="scene4a" class="scene"  onclick="showScene('scene4b')">
+    <div class="character2">
+      <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+      <div class="dialogue">
+        <p>Іріс:У всякому випадку краще ніж там</p>
+      </div>
+    </div>
+  </section>
+  <section id="scene4b" class="scene" onclick="showScene('scene4c')">
+    <div class="character1">
+      <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+      <div class="dialogue">
+        <p>Роа:Веларія славиться своєю музикою та мистецтвом. Цікаво, які змагання нас чекають?</p>
+      </div>
+    </div>
+  </section>
+  <section id="scene4c" class="scene"  onclick="showScene('scene4d')">
+    <div class="character2">
+      <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+      <div class="dialogue">
+        <p>Іріс:Сподіваюся, ми зможемо взяти участь і здобути ключ</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scene4d" class="scene"  onclick="showScene('scene4h')">
+    <div class="character2">
+      <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+      <div class="dialogue">
+        <p>Іріс:Добрий день, не підкажете де можна зареєструватись на змагання?</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scene4h" class="scene" onclick="showScene('scene4i')">
+    <div class="Elf">
+    <img src="./images/Elf.png" alt="Лицар" class="Elf">
+    <div class="dialogue">
+    <p>Ельф: Добрий день, нажаль на всі змагання реєсрація зачинена. Але.. що скажете про музику?</p>
+      </div>
+    </div>
+  </section>
+</section>
+<section id="scene4i" class="scene" onclick="showScene('scene4j')">
+  <div class="character1">
+    <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+    <div class="dialogue">
+      <p>Роа:Музика це круто, звичайно ми згодні. Я і співаю чудово,хочете послухати?</p>
+    </div>
+  </div>
+</section>
+
+<section id="scene4j" class="scene" onclick="showScene('scene4k')">
+  <div class="Elf">
+    <img src="./images/Elf.png" alt="Лицар" class="Elf">
+    <div class="dialogue">
+      <p>Ельф: Ні,дякую. Просто йдіть за мною. Вважайте ви вже є у списках</p>
+    </div> 
+  </div>
+</section>
+
+<section id="scene4k" class="scene" onclick="showScene('scene4l')">
+  <div class="dialogue">
+    <p>Ельф-ведучий: Вітаємо на музичних змаганнях Веларії!</p>
+  </div>
+</section>
+<section id="scene4l" class="scene" onclick="showScene('scene40')">
+  <div class="dialogue" >
+    <p>Ваше завдання — пройти музичну вікторину та налаштувати магічну арфу.</p>
+  </div>
+</section>
+
+<section id="scene40" class="scene">
+  <div class="dialogue">
+    <p>Питання 1: Який інструмент має струни, але не клавіші?</p>
+  </div>
+    <button onclick="showScene('scene4m')">Арфа</button>
+    <button onclick="saveScene('scene4fail'); showScene('scene4fail')">Флейта</button>
+    <button onclick="saveScene('scene4fail'); showScene('scene4fail')">Барабан</button>
+</section>
+
+<section id="scene4m" class="scene">
+  <div class="dialogue">
+    <p>Питання 2: Який інструмент найчастіше використовують ельфи для заклинань?</p>
+  </div>
+    <button onclick="showScene('scene4n')">Скрипка</button>
+    <button onclick="saveScene('scene4fail'); showScene('scene4fail')">Труба</button>
+    <button onclick="saveScene('scene4fail'); showScene('scene4fail')">Ксилофон</button>
+</section>
+
+<section id="scene4n" class="scene">
+  <div class="dialogue">
+    <p>Ельф-ведучий: Молодець! Тепер останнє завдання — яка перша нота на арфі?</p>
+  </div>
+  <button onclick="saveScene('scene4fail'); showScene('scene4fail')">Ля</button>
+  <button onclick="showScene('scene4o')">До</button>
+  <button onclick="saveScene('scene4fail'); showScene('scene4fail')">Мі</button>
+</section>
+
+
+
+
+<section id="scene4o" class="scene" onclick="saveScene('scene4o'); showScene('scene4p')">
+  <div class="Elf">
+    <img src="./images/Elf.png" alt="Лицар" class="Elf">
+    <div class="dialogue">
+      <p>Ельф: Вітаю! Ти пройшов випробування. Тримай ключ у формі ноти — він твій!</p>
+    </div> 
+  </div>
+</section>
+
+<section id="scene4fail" class="scene" onclick="saveScene('scene4fail'); showScene('scene101')">
+    <div class="dialogue">
+      <p>Ельф-ведучий: Нажаль, це неправильна відповідь. Дякую за участь</p>
+    </div> 
+</section>
+
+
+<section id="scene4p" class="scene" onclick="showScene('scene4q')">
+  <div class="character1">
+    <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+    <div class="dialogue">
+      <p>Роа:Ну,це було цікаво. Але я так хотів заспівати</p>
+    </div>
+  </div>
+</section>
+<section id="scene4q" class="scene"  onclick="showScene('scene4r')">
+  <div class="character2">
+    <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+    <div class="dialogue">
+      <p>Іріс:Добре, що не співав. Інакше нас би вигнали не розпочавши</p>
+    </div>
+  </div>
+</section>
+<section id="scene4r" class="scene" onclick="showScene('scene4s')">
+  <div class="character1">
+    <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+    <div class="dialogue">
+      <p>Роа:Оу, можливо це і не моя сильна сторона, але чому так грубо..</p>
+    </div>
+  </div>
+</section>
+<section id="scene4s" class="scene"  onclick="showScene('scene4t')">
+  <div class="character2">
+    <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+    <div class="dialogue">
+      <p>Іріс:Хто ще скаже правду окрім рідної сестри? І взагалі, ходімо вже</p>
+    </div>
+  </div>
+</section>
+<section id="scene4t" class="scene" onclick="showScene('scene4u')">
+  <div class="character1">
+    <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+    <div class="dialogue">
+      <p>Роа:Ну так.. Далі в нас Люмелія? Ніколи не бачив справжніх фей</p>
+    </div>
+  </div>
+</section>
+<section id="scene4u" class="scene"  onclick="showScene('scene5')">
+  <div class="character2">
+    <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+    <div class="dialogue">
+      <p>Іріс:Скоро особисто познайомишся</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="scene5" class="scene" onclick="showScene('scene5a')">
+  <div class="character1">
+    <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+    <div class="dialogue">
+      <p>Роа:Все настільки яскраве, ось би й тато був з нами</p>
+    </div>
+  </div>
+</section>
+<section id="scene5a" class="scene"  onclick="showScene('scene5b')">
+  <div class="character2">
+    <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+    <div class="dialogue">
+      <p>Іріс:Так, і мама теж. Я вже скучила за ними</p>
+    </div>
+  </div>
+</section>
+<section id="scene5b" class="scene" onclick="showScene('scene5c')">
+  <div class="character1">
+    <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+    <div class="dialogue">
+      <p>Роа:Сестра, якщо ми впораємось, вони пишатимуться?</p>
+    </div>
+  </div>
+</section>
+<section id="scene5c" class="scene"  onclick="showScene('scene5d')">
+  <div class="character2">
+    <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+    <div class="dialogue">
+      <p>Іріс:Звичайно, ось ми й прийшли</p>
+    </div>
+  </div>
+</section>
+<section id="scene5d" class="scene" onclick="showScene('scene5e')">
+  <div class="character1">
+    <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+    <div class="dialogue">
+      <p>Роа:Аааа, що це?! Спіймай, спіймай її</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="scene5e" class="scene">
+  <div class="flyingFairy">
+    <img src="./images/Fairy_happy_girl_fly.png" id="flyingFairy" alt="Фея" />
+    <div class="dialogue">
+      <p>Cпіймай фею</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="scene5f" class="scene" onclick="showScene('scene5g')">
+  <div class="Fairy">
+    <img src="./images/Fairy_angry_girl.png" alt="Лілі" class="Fairy floating">
+    <div class="dialogue">
+      <p>???: Не "що", а "хто". Мене звати Лілі, рада знайомству!</p>
+    </div>
+  </div>
+</section>
+
+<section id="scene5g" class="scene" onclick="showScene('scene5h')">
+  <div class="character1">
+    <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+    <div class="dialogue">
+      <p>Роа: Вау, ти така гарна. Ми теж раді знайомству.</p>
+    </div>
+  </div>
+</section>
+
+<section id="scene5h" class="scene" onclick="showScene('scene5i')">
+  <div class="Fairy">
+    <img src="./images/Fairy_happy_girl.png" alt="Лілі" class="Fairy floating">
+    <div class="dialogue">
+      <p>Лілі: Я живу недалеко. Ви можете зайти до мене — я приготувала щось смачненьке!</p>
+    </div>
+  </div>
+</section>
+
+<section id="scene5i" class="scene" onclick="showScene('scene5j')">
+  <div class="character2">
+    <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+    <div class="dialogue">
+      <p>Іріс: Ми не можемо відмовитись! Дякуємо, Лілі.</p>
+    </div>
+  </div>
+</section>
+
+<section id="scene5j" class="scene" onclick="showScene('scene5k')">
+  <div class="Fairy">
+    <img src="./images/Fairy_happy_girl.png" alt="Лілі" class="Fairy floating">
+    <div class="dialogue">
+      <p>Лілі: Знаєте, мій будинок зберігає багато спогадів. Особливо історію моєї бабусі та сліз щастя...</p>
+    </div>
+  </div>
+</section>
+
+<section id="scene5k" class="scene">
+  <div class="dialogue">
+    <p>Що ви зробите?</p>
+  </div>
+    <button onclick="showScene('scene5_listen')">1. Вислухати історію з повагою</button>
+    <button onclick="saveScene('scene5_interrupt'); showScene('scene5_interrupt')">2. Перервати фею та вимагати ключ</button>
+</section>
+
+<section id="scene5_listen" class="scene" onclick="showScene('scene5key')">
+  <div class="Fairy">
+    <img src="./images/Fairy_happy_girl.png" alt="Лілі" class="Fairy floating">
+    <div class="dialogue">
+      <p>Лілі: Ви такі уважні... Бабуся завжди казала — хто слухає з серцем, той отримає більше, ніж просить.</p>
+      <p>Ось, тримайте ключ. Для друзів мені нічого не шкода.</p>
+    </div>
+  </div>
+</section>
+
+<section id="scene5key" class="scene" onclick="saveScene('scene5key'); showScene('scene6')">
+  <div class="dialogue">
+    <p>Ви отримали ключ зі сліз щастя! Наступна зупинка — Ерестор.</p>
+  </div>
+</section>
+
+<section id="scene5_interrupt" class="scene" onclick="showScene('scene5fail')">
+  <div class="Fairy">
+    <img src="./images/Fairy_angry_girl.png" alt="Лілі" class="Fairy floating">
+    <div class="dialogue">
+      <p>Лілі: Ви зовсім не слухаєте! Я хотіла поділитись... але навіщо? Йдіть геть!</p>
+    </div>
+  </div>
+</section>
+
+<section id="scene5fail" class="scene" onclick="showScene('scene5l')">
+  <div class="character2">
+    <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+    <div class="dialogue">
+      <p>Іріс:Вона зникла, тепер ми не отримаємо ключ</p>
+    </div>
+  </div>
+</section>
+<section id="scene5l" class="scene" onclick="showScene('scene101')">
+  <div class="character1">
+    <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+    <div class="dialogue">
+      <p>Роа: Смаколиків теж не буде? Хоча куди там..</p>
+    </div>
+  </div>
+</section>
+
+<section id="scene5m" class="scene" onclick="showScene('scene6')">
+  <div class="character2">
+    <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+    <div class="dialogue">
+      <p>Іріс:Сподіваюсь в Ересторі проблем не буде</p>
+    </div>
+  </div>
+</section>
+
+<!-- Сцена з Рофом -->
+<section id="scene6" class="scene" onclick="showScene('scene6a')">
+  <div class="character1">
+    <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+    <div class="dialogue">
+      <p>Роa: Дворфи не люблять чужинців. Нам слід підготуватися.</p>
+    </div>
+  </div>
+</section>
+<section id="scene6a" class="scene" onclick="showScene('scene6b')">
+  <div class="character2">
+    <img src="./images/iris_fly.png" alt="Тінька" class="character2 floating">
+    <div class="dialogue">
+      <p>Тінька: Давай щось купимо у них.</p>
+    </div>
+  </div>
+</section>
+
+<section id="scene6b" class="scene" onclick="showScene('scene6c')">
+  <div class="character1">
+    <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+    <div class="dialogue">
+      <p>Роa: А це вихід</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="scene6c" class="scene" onclick="showScene('scene6d')">
+  <div class="dvorf">
+    <img src="./images/Erestor_dvorf.png" alt="Дворф" class="dvorf">
+    <div class="dialogue">
+      <p>Дворф: Що привело вас до Ерестору?</p>
+    </div>
+  </div>
+</section>
+
+<section id="scene6d" class="scene">
+  <div class="dialogue">
+    <p>Дворф: Якщо скажете щось дивне - вижену</p>
+  </div>
+    <button onclick="saveScene('scene6e'); showScene('scene6e')">Ми шукаємо ключ, щоб врятувати всесвіт</button>
+    <button onclick="showScene('scene6f')">Ми прийшли за сувенірами для сім'ї.</button>
+</section>
+
+<!-- Наслідок вибору 1: пошук ключа -->
+<section id="scene6e" class="scene" onclick="showScene('scene101')">
+  <div class="dvorf">
+    <img src="./images/Erestor_dvorf.png" alt="Дворф " class="dvorf">
+    <div class="dialogue">
+      <p>Дворф: Ви що, божевільні? Йдіть звідси!</p>
+    </div>
+  </div>
+</section>
+
+<!-- Наслідок вибору 2: сувеніри -->
+<section id="scene6f" class="scene" onclick="showScene('scene6g')">
+  <div class="dvorf">
+    <img src="./images/Erestor_dvorf.png" alt="Дворф усміхнений" class="dvorf">
+    <div class="dialogue">
+      <p>Дворф: О, це приємно чути! Ходімо, я покажу вам дещо особливе.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Сцена з драконом і похвалою -->
+<section id="scene6g" class="scene" onclick="showScene('scene6h')">
+  <div class="character2">
+    <img src="./images/iris_fly.png" alt="Дракон" class="character2 floating">
+    <div class="dialogue">
+      <p>Іріс: Це ж справжній витвір мистецтва! Ваша робота — бездоганна, дворфе.</p>
+    </div>
+  </div>
+</section>
+
+  <section id="scene6g" class="scene" onclick="showScene('scene6h')">
+  <div class="dvorf">
+    <img src="./images/Erestor_dvorf.png" alt="Дворф" class="dvorf">
+    <div class="dialogue">
+      <p>Дворф: Дякую, це для нас велика честь.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Вибір сувеніру -->
+<section id="scene6h" class="scene">
+  <div class="dialogue">
+    <p>Дворф: Оберіть, що вам до вподоби:</p>
+  </div>
+    <button onclick="showScene('scene6i')">Магічний пил</button>
+    <button onclick="showScene('scene6i')">Сяюча виделка</button>
+    <button onclick="showScene('scene6i')">Сяючий кристал</button>
+</section>
+
+<!-- Шахта з ключем -->
+<section id="scene6i" class="scene" onclick="showScene('scene6j')">
+  <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+  <div class="dialogue">
+    <p>Іріс: Це ж справжній витвір мистецтва! Ваша робота — бездоганна, дякую!</p>
+  </div>
+</section>
+
+<!-- Роздуми персонажів у шахті -->
+<section id="scene6j" class="scene" onclick="showScene('scene6w')">
+  <div class="character1">
+    <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+    <div class="dialogue">
+      <p>Роа: Нам потрібно замінити ключ на інший предмет.</p>
+    </div>
+  </div>
+</section>
+  <section id="scene6w" class="scene">
+    <div class="dialogue">
+      <p>Іріс: Давай зробимо це обережно.</p>
+    </div>
+    <button onclick="showScene('scene6k')">Замінити ключ на сувенір</button>
+    <button onclick="showScene('scene6l')">Вкрасти ключ і тікати</button>
+</section>
+
+<!-- Успіх з заміною -->
+<section id="scene6k" class="scene" onclick="saveScene('scene6k'); showScene('scene6n')">
+  <div class="character1">
+    <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+    <div class="dialogue">
+    <p> Роа: В нас все вийшло! Ми успішно замінили ключ. Тепер він у вас!</p>
+  </div>
+</section>
+
+<!-- Вибір тунелю при втечі -->
+<section id="scene6l" class="scene">
+    <div class="dialogue">
+    <p>Роа:І куди тепер? Ми зайшли в правий тунель, значит тепер він..</p>
+  </div>
+    <button onclick="saveScene('scene6m'); showScene('scene6m')">Лівий</button>
+    <button onclick="showScene('scene6n')">Правий</button>
+</section>
+
+<!-- Наліво — невдача -->
+<section id="scene6m" class="scene" onclick="showScene('scene101')">
+  <div class="dialogue">
+    <p>Охорона перехопила вас! Ключ забрано</p>
+  </div>
+</section>
+
+<!-- Направо — успіх -->
+<section id="scene6n" class="scene" onclick="showScene('scene7')">
+  <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+  <div class="dialogue">
+    <p>Іріс:Тепер ми можемо йти до короля</p>
+  </div>
+</section>
+
+
+
+
+
+<section id="scene7" class="scene" onclick="showScene('scene7a')">
+  <div class="character1">
+    <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+    <div class="dialogue">
+      <p>Роа:Я так хотів додому, але тепер не хочеться прощатись</p>
+    </div>
+  </div>
+</section>
+
+<section id="scene7a" class="scene"  onclick="showScene('scene7b')">
+  <div class="character2">
+    <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+    <div class="dialogue">
+      <p>Іріс:Це була цікава подорож, рада,що ми познайомились. </p>
+    </div>
+  </div>
+</section>
+
+<section id="scene7b" class="scene" onclick="showScene('scene7c')">
+  <div class="character1">
+    <img src="./images/roa_fly_happy.jpg" alt="Роа" class="character1 floating">
+    <div class="dialogue">
+      <p>Роа:Я стільки всього хочу сказати, але напевно король теж зачекався</p>
+    </div>
+  </div>
+</section>
+
+<section id="scene7c" class="scene"  onclick="showScene('scene7d')">
+  <div class="character2">
+    <img src="./images/iris_fly.png" alt="Іріс" class="character2 floating">
+    <div class="dialogue">
+      <p>Іріс:Так, давайте спішити</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="scene7d" class="scene" onclick= "showScene('scene100')">
+  <div class="dialogue">
+    <p>Король: Ви виконали надзвичайне завдання. Завдяки вам наш світ врятовано.</p>
+  </div>
+</section>
+
+
+<section id="scene100" class="scene">
+    <div class="dialogue">
+      <p>Роa:Ось так наш друг врятував світ.Його пам'ятник стоїть у центрі Астралії, нагадуючи про його подвиг</p>
+    </div>
+</section>
+
+<section id="scene101" class="scene">
+  <div class="dialogue">
+    <p>Роa:Ось так ми не впоралися з завданням. Війна була жорстока, саме там я втратив свою сестру</p>
+  </div>
+</section>
+
+
+
+
+  <script src="quest.js"></script>
+</html>

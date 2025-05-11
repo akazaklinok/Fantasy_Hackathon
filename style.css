@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  font-family: 'Marmelad', serif;
+  background: url(./images/sky.jpg);
+  justify-content: center;
+  gap: 150px;
+  font-size: 68px;
+  font-weight: bold;
+  color: #dec37a;
+  text-align: center;
+}
+
+.menu a {
+  color: #dec37a; 
+  text-decoration: none;
+}
+
+.menu{
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  font-size: 68px;
+  font-weight: bold;
+  color: #dec37a;
+  text-align: center;
+  width: 100%;
+}
+
+.menu-bar {
+  background-color: transparent;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  z-index: 10;
+}
+
+
+.frame {
+  border: 6px solid #c49a5a;
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 1100px;
+  background-color: #2d0662;
+  position: relative;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.hero-text {
+  flex: 1 1 60%;
+  font-size: 30px; /* Было 24px */
+  line-height: 1.6;
+  text-align: left;
+  padding-left: 60px; /* Было 20px */
+  color: #dec37a; /* Чтобы текст был жёлтым */
+  margin-left: -100px;
+}
+
+.hero-text h1 {
+  font-size: 48px; /* Было 32px */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 200px;
+  background: url(./images/background_with_dragon.png) no-repeat center
+    center/cover;
+  position: relative;
+}
+
+
+.intro-box,
+.response-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #dec37a;
+  padding: 40px;
+  max-width: 700px;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #dec37a;
+}
+
+input,
+select,
+button {
+  font-family: 'Marmelad', serif;
+  font-size: 20px;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 10px;
+  border: none;
+}
+
+button {
+  background-color: #dec37a;
+  color: #2e1e00;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f1d88a;
+}
+
+.dragons-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.dragon-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.reply-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 20px 30px;
+  width: 500px;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+.dragon-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dialogue-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  
+}
+
+.dialogue-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.dialogue-card {
+  background: linear-gradient(145deg, #2e1a47, #3c265b);
+  border: 3px solid #d6b365;
+  border-radius: 18px;
+  padding: 10px 100px;
+  box-shadow: 0 0 20px rgba(214, 179, 101, 0.6);
+  font-size: 30px; /* Тоже уменьшаем текст */
+}
+
+
+
+.left-dragon {
+  width: 400px;
+  height: 500px;
+  order: -5;
+  margin-left: 90px;
+}
+
+.right-dragon {
+  width: 550px;
+  height: 600px;
+  margin-top: -50px;     /* поднимает вверх */
+  margin-left: 90px;     /* сдвигает вправо */
+}
+
+
+
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}

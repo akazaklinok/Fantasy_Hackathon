@@ -1,0 +1,1897 @@
+/* СТАРТ */
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #5e2ca5, #b084cc);
+    border: 2px solid #ffeaa7;
+    color: #ffeaa7;
+    font-size: 18px;
+    font-family: "Playfair Display SC", serif;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #b084cc, 0 0 20px #5e2ca5;
+    transition: 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .music-btn:hover {
+    box-shadow: 0 0 25px #ffffff, 0 0 40px #7e8339;
+    transform: scale(1.1);
+  }
+  
+  body {
+  background: url("./images/backround_start_quest.jpg");
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* АНІМАЦІЯ, КНОПКИ */
+.floating {
+    animation: float 2s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+
+  
+  button {
+    background-color: #dec37a;
+    color: #2e1e00;
+    font-weight: bold;
+    cursor: pointer;
+    
+  }
+  
+  button:hover {
+    background-color: #f1d88a;
+    
+  }
+
+/* КВЕСТ - ЗУСТРІЧ З КОРОЛЕМ  */
+.scene.active {
+    display: block;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .scene {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+    
+  }
+  
+  #scene1 {
+    background-image: url('./images/Astralia_street.jpg');
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Marmelad', serif;
+    color: #e4ffe4;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  
+  #scenea {
+    background-image: url('./images/Astralia_street.jpg');
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Marmelad', serif;
+    color: #e4ffe4;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  
+  #scene1b {
+    background-image: url('./images/palace_entry.jpg');
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Marmelad', serif;
+    color: #e4ffe4;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  #scene1c {
+    background-image: url('./images/palace_entry.jpg');
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Marmelad', serif;
+    color: #e4ffe4;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  
+  
+  #scene1d {
+    background-image: url('./images/door_choice.jpg');
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Marmelad', serif;
+    color: #e4ffe4;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  #scene1e {
+    background-image: url('./images/door_choice.jpg');
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Marmelad', serif;
+    color: #e4ffe4;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  #scene1f {
+    background-image: url('./images/king_part.jpg');
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Marmelad', serif;
+    color: #e4ffe4;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  #scene1k {
+    background-image: url('./images/king_part.jpg');
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Marmelad', serif;
+    color: #e4ffe4;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  #scene1l {
+    background-image: url('./images/king_part.jpg');
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Marmelad', serif;
+    color: #e4ffe4;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  #scene1g {
+    background-image: url('./images/door_choice.jpg');
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Marmelad', serif;
+    color: #e4ffe4;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  #scene1h {
+    background-image: url('./images/king_part.jpg');
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Marmelad', serif;
+    color: #e4ffe4;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  #scene1i {
+    background-image: url('./images/king_part.jpg');
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Marmelad', serif;
+    color: #e4ffe4;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  #scene1j {
+    background-image: url('./images/king_part.jpg');
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Marmelad', serif;
+    color: #e4ffe4;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  #scene1m {
+    background-image: url('./images/king_part.jpg');
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: 'Marmelad', serif;
+    color: #e4ffe4;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  .dialogue {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 1540px;
+    height: 200px;
+    background-color: black;
+    opacity: 0.7; /* необов'язково — для прозорості */
+    margin-top: -150px;
+  }
+
+
+
+  input,
+  select,
+  button {
+    font-family: 'Marmelad', serif;
+    font-size: 25px;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    border: none;
+    opacity: 0.7;
+    
+  }
+  
+ 
+
+  .character-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+  }
+/*ДРАКОНИ */
+.character1{
+    max-height: 500px;
+    object-fit: contain;
+}
+.character2 {
+    max-height: 500px;
+    object-fit: contain;
+}
+.NPSRnight {
+  max-height: 1000px;
+  object-fit: contain;
+}
+.Elf {
+  max-height: 1000px;
+  object-fit: contain;
+}
+.Fairy{
+  max-height: 500px;
+  object-fit: contain;
+}
+.dvorf {
+  max-height: 1000px;
+  object-fit: contain;
+}
+
+
+#intro p {
+    font-size: 4.2rem;
+    margin: 20px;
+    color: #ffeaa7;
+    ;
+    animation: magicGlow 5s ease-in-out infinite;
+}
+
+.active {
+    font-size: 60px;
+    max-width: 100%;
+    color: #dec37a;
+    justify-content: center; /* центрує по горизонталі */
+    align-items: center;     /* центрує по вертикалі */
+}
+/* ЗАГАЛЬНЕ*/
+
+#intro button {
+    background: linear-gradient(145deg, #5e2ca5, #b084cc);
+    color: #ffeaa7;
+    border: 2px solid #dec37a;
+    padding: 12px 30px;
+    font-size: 40px;
+    font-family: "Playfair Display SC", serif;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #b084cc, 0 0 20px #5e2ca5;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 1px 1px 2px #000;
+    
+
+  }
+
+#intro button:hover {
+    box-shadow: 0 0 25px #ffffff, 0 0 40px #7e8339;
+    transform: scale(1.05);
+    animation: shimmer 2s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+/*ГЛАВА 1 КЛЮЧ АСТРАЛІЯ */
+
+#scene2 {
+  background-image: url('./images/Astralia_street.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#scene2a {
+  background-image: url('./images/Astralia_street.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#scene2b {
+  background-image: url('./images/Astralia_street.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#scene2c {
+  background-image: url('./images/Astralia_street.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#scene2d{
+  background-image: url('./images/forest_Astralia.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#scene2e {
+  background-image: url('./images/forest_Astralia.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#scene2f {
+  background-image:  url('./images/cave_astralia.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#scene2g {
+  background-image: url('./images/cave_astralia.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#scene2h {
+  background-image:url('./images/cave_astralia.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}  #scene2i {
+  background-image: url('./images/cave_astralia.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene2j {
+  background-image: url('./images/cave_astralia.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene2k {
+  background-image: url('./images/cave_astralia.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene2l {
+  background-image: url('./images/Astralia_in_cave.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene2m {
+  background-image: url('./images/Astralia_in_cave.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene2n {
+  background-image: url('./images/Astralia_in_cave.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene2o {
+  background-image:url('./images/Astralia_in_cave.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene2p {
+  background-image:url('./images/Astralia_in_cave.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene2q {
+  background-image: url('./images/Astralia_in_cave.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene2r {
+  background-image: url('./images/cave_astralia.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene2s {
+  background-image: url('./images/cave_astralia.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene2t {
+  background-image: url('./images/cave_astralia.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+
+/*ГЛАВА 1 КЛЮЧ АЛІСАРІЯ */
+
+#scene3 {
+  background-image: url('./images/Elisaria_forest.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#scene3a {
+  background-image: url('./images/Elisaria_forest.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#scene3b {
+  background-image: url('./images/Elisaria_forest_goblin.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#scene3c {
+  background-image: url('./images/Elisaria_forest_goblin.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#scene3d {
+  background-image: url('./images/Elisaria_forest_goblin.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#scene3e {
+  background-image: url('./images/Elisaria_forest_goblin.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#scene3f {
+  background-image:  url('./images/Elisaria_forest_goblin.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#scene3g {
+  background-image: url('./images/Elisaria_forest_goblin.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#scene3h {
+  background-image: url('./images/Elisaria_forest_goblin.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+} 
+#scene3i {
+  background-image: url('./images/Elisaria_invite.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene3j {
+  background-image: url('./images/Elisaria_forest_goblin.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene3k {
+  background-image: url('./images/Elisaria_forest_goblin.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene3l {
+  background-image: url('./images/Elisaria_forest.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene3m {
+  background-image: url('./images/Elisaria_forest.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene3n {
+  background-image: url('./images/Elisaria_forest.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene3o {
+  background-image: url('./images/Elisaria_forest.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene3p {
+  background-image:url('./images/Elisaria_invite.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene3q {
+  background-image: url('./images/Elisaria_invite.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene3r {
+  background-image: url('./images/Elisaria_forest.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene3s {
+  background-image: url('./images/Elisaria_forest.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene3t {
+  background-image: url('./images/Elisaria_in.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene3u {
+  background-image: url('./images/Elisaria_in.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene3v {
+  background-image: url('./images/Elisaria_in.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene3w {
+  background-image: url('./images/Elisaria_in.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene3x {
+  background-image: url('./images/Elisaria_in.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene3y {
+  background-image: url('./images/Elisaria_room.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene3z {
+  background-image: url('./images/Elisaria_in_room.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene31 {
+  background-image: url('./images/Elisaria_in_room.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene32 {
+  background-image: url('./images/Elisaria_in_room.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene33 {
+  background-image: url('./images/Elisaria_in_room.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4 {
+  background-image: url('./images/Velaria_forest.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4a {
+  background-image: url('./images/Velaria_forest.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4b {
+  background-image: url('./images/Velaria_forest.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4c {
+  background-image: url('./images/Velaria_forest.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4d {
+  background-image: url('./images/Velaria_kvest_people.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4e {
+  background-image: url('./images/Velaria_kvest_people.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4f {
+  background-image: url('./images/Velaria_kvest_people.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4g {
+  background-image: url('./images/Velaria_kvest_people.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4h {
+  background-image: url('./images/Velaria_kvest_people.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4i {
+  background-image: url('./images/Velaria_kvest_people.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4j {
+  background-image: url('./images/Velaria_kvest_people.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4k {
+  background-image: url('./images/Velaria_srart.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4l {
+  background-image: url('./images/Velaria_srart.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4m {
+  background-image: url('./images/Velaria_srart.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4n {
+  background-image: url('./images/Velaria_srart.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4o {
+  background-image: url('./images/Velaria_srart.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4p {
+  background-image:url('./images/Velaria_kvest_people.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4q {
+  background-image: url('./images/Velaria_kvest_people.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4r {
+  background-image: url('./images/Velaria_kvest_people.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4s {
+  background-image: url('./images/Velaria_kvest_people.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4t {
+  background-image: url('./images/Velaria_kvest_people.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4u {
+  background-image: url('./images/Velaria_kvest_people.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4v {
+  background-image: url('./images/Velaria_kvest_people.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene40 {
+  background-image: url('./images/Velaria_kvest_people.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene4fail {
+  background-image: url('./images/Velaria_kvest_people.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+#scene5 {
+  background-image: url('./images/Fairy_forest.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene5a {
+  background-image: url('./images/Fairy_forest.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene5b {
+  background-image: url('./images/Fairy_forest.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene5c {
+  background-image: url('./images/Fairy_forest.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene5d {
+  background-image: url('./images/Fairy_town.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene5e {
+  background-image: url('./images/Fairy_town.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene5f {
+  background-image: url('./images/Fairy_town.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene5g {
+  background-image: url('./images/Fairy_town.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene5h {
+  background-image: url('./images/Fairy_town.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene5i {
+  background-image: url('./images/Fairy_town.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene5j {
+  background-image: url('./images/Fairy_room.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene5k {
+  background-image: url('./images/Fairy_room.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene5l {
+  background-image: url('./images/Fairy_room.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene5m {
+  background-image: url('./images/Fairy_room.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#scene5fail {
+  background-image: url('./images/Fairy_room.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene5_interrupt {
+  background-image: url('./images/Fairy_room.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene5_listen {
+  background-image: url('./images/Fairy_room.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene5key {
+  background-image: url('./images/Fairy_room.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+
+#flyingFairy {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  z-index: 1000;
+  pointer-events: auto;
+  filter: drop-shadow(0 0 10px rgba(255, 200, 255, 0.8));
+  transition: transform 0.6s ease-in-out;
+  animation: sparkle 0.8s infinite alternate;
+}
+
+@keyframes sparkle {
+  0% { filter: drop-shadow(0 0 10px rgba(255, 200, 255, 0.8)); }
+  100% { filter: drop-shadow(0 0 20px rgba(255, 100, 255, 1)); }
+}
+
+
+
+
+
+#scene6 {
+  background-image: url('./images/Fairy_room.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+#scene6 {
+  background-image: url('./images/Erestor.PNG');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene6a {
+  background-image: url('./images/Erestor.PNG');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene6b {
+  background-image: url('./images/Erestor.PNG');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene6c {
+  background-image: url('./images/Erestor_people_work.PNG');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene6d {
+  background-image: url('./images/Erestor_people_work.PNG');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene6e {
+  background-image: url('./images/Erestor_people_work.PNG');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene6f {
+  background-image: url('./images/Erestor_people_work.PNG');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene6g {
+  background-image: url('./images/Erestor_people_work.PNG');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene6h {
+  background-image: url('./images/Erestor_people_work.PNG');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene6i {
+  background-image: url('./images/Erestor_people_work.PNG');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene6j {
+  background-image: url('./images/Erestor_work.PNG');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene6k {
+  background-image: url('./images/Erestor_work.PNG');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene6w {
+  background-image: url('./images/Erestor_work.PNG');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene6l {
+  background-image: url('./images/Erestor_choose.PNG');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene6m {
+  background-image: url('./images/Erestor_people_work.PNG');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene6n {
+  background-image: url('./images/Erestor.PNG');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+#scene6 {
+  background-image: url('./images/Fairy_room.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+#scene7 {
+  background-image: url('./images/Astralia_street.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene7a {
+  background-image: url('./images/Astralia_street.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene7b {
+  background-image: url('./images/Astralia_street.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene7c {
+  background-image: url('./images/Astralia_street.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene7d {
+  background-image: url('./images/king_part.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene12 {
+  background-image: url('./images/king_part.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene11 {
+  background-image: url('./images/king_part.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#scene100 {
+  background-image: url('./images/good_ending.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}
+#scene101 {
+  background-image: url('./images/bad_ending.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Marmelad', serif;
+  color: #e4ffe4;
+  text-align: center;
+  overflow-x: hidden;
+}

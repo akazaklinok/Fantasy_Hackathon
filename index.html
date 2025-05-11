@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Астралія</title>
+    <link rel="stylesheet" href="style.css">
+ </head>
+<body>
+      <header class="menu-bar">
+        <nav class="menu">
+          <span><a href="plot.html">CЮЖЕТ</a></span>
+          <span><a href="quest.html">КВЕСТ</a></span>
+          <span><a href="shop.html">МАГАЗИН</a></span>
+        </nav>
+      </header>
+</body>
+      
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Вітаю вас у фантастичному світі!</h1>
+            <p>Тут ви зможете зануритися у<br>всесвіт магії, героїв і<br> випробувань.Я — Ігніл, хранитель історій. <br>Разом з моїми малюками ми<br> допоможемо пройти цей<br> шлях! Обирай мудро й ніколи<br> не втрачай віри в себе.</p>
+        </div>
+    </section>
+
+
+
+
+    
+    <div class="intro-box" id="intro">
+      <p>Привіт, мандрівнику! Як тебе звати?</p>
+      <input type="text" id="nameInput" placeholder="Введи своє ім’я">
+    
+      <p>Що тебе найбільше приваблює?</p>
+      <select id="choiceInput">
+        <option value="">— Обери —</option>
+        <option value="пригоди">Пригоди</option>
+        <option value="спокій">Відпочинок</option>
+        <option value="магія">Магія</option>
+      </select>
+    
+      <br><br>
+      <button onclick="submitIntro()">Почати подорож</button>
+    </div>
+    
+    <div class="response-box" id="response" style="display:none;">
+      <p><strong><span id="nameDisplay"></span></strong>, тебе вже чекають!</p>
+    
+      <div class="dragons-area">
+        <div class="dragon-block">
+          <img src="./images/dancing_roa.png" alt="Роа" class="dragon-img">
+          <p id="iskrykReply"></p>
+        </div>
+        <div class="dragon-block">
+          <img src="./images/happy_Iris.png" alt="Іріс" class="dragon-img">
+          <p id="tinkaReply"></p>
+        </div>
+      </div>
+    </div>
+
+          <div class="dialogue-container">
+            <div class="dialogue-row">
+              <img src="./images/magic_Iris.png" alt="Ірі" class="dragon right-dragon" />
+              <div class="dialogue-card">
+                <p>Рада знайомству. <br>Мене звати Іріс. Не дуже люблю шум,а ось книги - це моя стихія. Якщо десь щось сталося — я без проблем вирішу проблему. Тому якщо знадобиться допомога— можеш на мене розраховувати.</p>
+              </div>
+            </div>
+          
+            <div class="dialogue-row">
+              <div class="dialogue-card">
+                <p>Привітик, я — Роа!<br>Ти не повіриш, скільки всього <br> цікавого я хочу розповісти. Дуже люблю <br> активний відпочинок та нові знайомста!<br> Обожнюю літати, вигадувати щось нове… <br>іноді ламаю все довкола. Але Іріс каже, <br> що без мене було б нудно. <br>Якщо хочеш пригод — просто тримайся поруч!</p>
+              </div>
+              <img src="./images/happy_roa.png" alt="Роа" class="dragon left-dragon" />
+            </div>
+
+    <script src="unit.js"></script>
+</body>
+</html>
+  
